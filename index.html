@@ -64,19 +64,15 @@
     .btn-wolt-nav {
       display: flex;
       align-items: center;
-      gap: 6px;
-      background: var(--wolt);
-      color: #fff;
-      padding: 7px 15px;
-      border-radius: 999px;
+      background: transparent;
+      padding: 2px;
+      border-radius: 50%;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 0.82rem;
-      transition: background 0.2s, transform 0.2s;
+      transition: transform 0.2s, opacity 0.2s;
       cursor: pointer;
-      white-space: nowrap;
     }
-    .btn-wolt-nav:hover { background: #007ab5; transform: translateY(-1px); }
+    .btn-wolt-nav:hover { transform: translateY(-1px) scale(1.08); opacity: 0.88; }
+    .btn-wolt-nav img { width: 40px; height: 40px; border-radius: 50%; display: block; }
 
     .btn-ig-nav {
       display: flex;
@@ -779,11 +775,9 @@
       href="https://wolt.com/he/isr/rishon-lezion-hashfela-area/restaurant/haneched-shel-avram?srsltid=AfmBOopN0D6WibYuBwq3Y99y0vKXpD4S-sXSNvVxpHIovAYa7BTUDfv2"
       target="_blank" rel="noopener noreferrer"
       class="btn-wolt-nav"
+      aria-label="הזמן בוולט"
     >
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-      </svg>
-      הזמן בוולט
+      <img src="photos/wolt-logo.png" alt="Wolt">
     </a>
     <a
       href="https://www.instagram.com/avramsgrandson/"
@@ -818,10 +812,8 @@
       target="_blank" rel="noopener noreferrer"
       class="hero-cta"
     >
-      הזמן עכשיו בוולט
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
-      </svg>
+      <img src="photos/wolt-logo.png" alt="Wolt" style="height:28px;width:28px;border-radius:50%;">
+      הזמן עכשיו
     </a>
   </div>
 </div>
@@ -1256,10 +1248,8 @@
         target="_blank" rel="noopener noreferrer"
         class="btn-wolt-big"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-        </svg>
-        הזמן בוולט
+        <img src="photos/wolt-logo.png" alt="Wolt" style="height:30px;width:30px;border-radius:50%;">
+        הזמן עכשיו
       </a>
       <a
         href="https://www.instagram.com/avramsgrandson/"
