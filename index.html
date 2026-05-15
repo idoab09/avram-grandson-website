@@ -118,9 +118,9 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(8,8,8,0.25) 0%,
-        rgba(8,8,8,0.05) 35%,
-        rgba(8,8,8,0.65) 75%,
+        rgba(8,8,8,0.45) 0%,
+        rgba(8,8,8,0.55) 35%,
+        rgba(8,8,8,0.78) 70%,
         rgba(8,8,8,1) 100%
       );
     }
@@ -154,6 +154,7 @@
       line-height: 0.95;
       letter-spacing: -3px;
       margin-bottom: 14px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.7);
     }
     .hero-title .gold { color: var(--gold); }
 
@@ -163,6 +164,7 @@
       color: rgba(242,237,228,0.65);
       letter-spacing: 3px;
       margin-bottom: 36px;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.8);
     }
 
     .hero-cta {
@@ -339,6 +341,7 @@
       aspect-ratio: 3/4;
       position: relative;
       box-shadow: 0 32px 80px rgba(0,0,0,0.55);
+      cursor: pointer;
     }
 
     .story-img-caption {
@@ -454,13 +457,21 @@
       overflow: hidden;
       aspect-ratio: 4/5;
       box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+      cursor: pointer;
     }
 
     .about-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
     }
+    .about-img-wrap:hover img { transform: scale(1.07); }
+
+    .story-img-wrap img {
+      transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .story-img-wrap:hover img { transform: scale(1.07); }
 
     .info-cards {
       display: grid;
@@ -697,8 +708,8 @@
       nav { top: 8px; left: 8px; right: 8px; padding: 9px 14px; }
       .nav-logo { font-size: 1rem; }
 
-      .hero { height: 62vh; min-height: 400px; }
-      .hero-bg { object-fit: contain; object-position: center center; background: #080808; }
+      .hero { height: 100vh; min-height: 500px; }
+      .hero-bg { object-fit: cover; object-position: center 30%; }
 
       .section-wrap { padding: 44px 16px; }
 
@@ -749,7 +760,9 @@
 
     @media (prefers-reduced-motion: reduce) {
       .fu, .rtr { opacity: 1; transform: none; transition: none; }
-      .g-img { transition: none; }
+      .g-img,
+      .about-img-wrap img,
+      .story-img-wrap img { transition: none; }
     }
   </style>
 </head>
@@ -757,7 +770,10 @@
 
 <!-- ══════════ NAVBAR ══════════ -->
 <nav>
-  <div class="nav-logo">הנכד <span>של אברם</span></div>
+  <div class="nav-logo" style="display:flex;align-items:center;gap:9px;">
+    <img src="photos/logo100.png" alt="לוגו" style="width:34px;height:34px;border-radius:50%;border:1px solid rgba(200,147,42,0.4);flex-shrink:0;">
+    הנכד <span>של אברם</span>
+  </div>
   <div class="nav-actions">
     <a
       href="https://wolt.com/he/isr/rishon-lezion-hashfela-area/restaurant/haneched-shel-avram?srsltid=AfmBOopN0D6WibYuBwq3Y99y0vKXpD4S-sXSNvVxpHIovAYa7BTUDfv2"
@@ -793,12 +809,6 @@
   >
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge" aria-label="מסעדה כשרה בראשון לציון">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-      </svg>
-      כשר · ראשון לציון
-    </div>
     <h1 class="hero-title">
       הנכד<br><span class="gold">של אברם</span>
     </h1>
@@ -974,6 +984,7 @@
 
       <!-- Text side -->
       <div class="story-text">
+        <img src="photos/logo100.png" alt="לוגו הנכד של אברם" class="rtr" style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(200,147,42,0.35);margin-bottom:18px;display:block;">
         <span class="tag rtr">הסיפור שלנו</span>
         <h2 class="sec-title rtr">הנכד של אברם —<br><span style="color:var(--gold);">מורשת שמריחה<br>כמו בית</span></h2>
         <div class="gold-line rtr"></div>
@@ -1266,7 +1277,7 @@
 
 <!-- ══════════ FOOTER ══════════ -->
 <footer>
-  <img src="photos/logo100.png" alt="לוגו הנכד של אברם" style="width:88px;height:88px;border-radius:50%;border:2px solid rgba(200,147,42,0.35);margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;">
+  <img src="photos/logo100.png" alt="לוגו הנכד של אברם" style="width:88px;height:88px;border-radius:50%;border:2px solid rgba(200,147,42,0.35);margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;transition:transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
   <div class="foot-logo">הנכד של אברם</div>
   <div class="foot-info">
     ברשבסקי 7, ראשון לציון<br>
